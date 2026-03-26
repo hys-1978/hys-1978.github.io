@@ -1,46 +1,269 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
-    <!-- 让手机自适应 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的免费网站</title>
+    <title>化英社 - 闲置物品交易平台</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        body {
             font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 顶部样式 */
+        header {
+            background-color: #2c7a53;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 60px 20px;
-            background: #f5f7fa;
         }
-        .box {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        .subtitle {
+            margin-top: 8px;
+            font-size: 16px;
+            opacity: 0.9;
         }
-        h1 {
-            color: #2d81e2;
-            margin-bottom: 20px;
+
+        /* 导航栏 */
+        nav {
+            background-color: #f5f5f5;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
         }
-        p {
-            font-size: 18px;
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
             color: #333;
-            line-height: 1.6;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #2c7a53;
+        }
+
+        /* 主体容器 */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* 板块标题 */
+        .section-title {
+            font-size: 22px;
+            color: #2c7a53;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #eee;
+        }
+
+        /* 商品展示卡片 */
+        .goods-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            width: 260px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #f9f9f9;
+        }
+
+        .card-info {
+            padding: 15px;
+        }
+
+        .card-name {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .card-price {
+            color: #e64343;
+            font-size: 18px;
+            margin: 6px 0;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: #666;
             margin-bottom: 10px;
         }
-        a {
-            color: #2d81e2;
-            text-decoration: none;
+
+        /* 寄卖表单 */
+        .form-box {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: 0 auto;
         }
-    </style></head><body>
-    <div class="box">
-        <h1>我的零成本网站</h1>
-        <p>这个网站完全免费搭建！</p>
-        <p>使用 GitHub Pages 托管</p>
-        <p>访问地址：你的用户名.github.io</p>
-    </div></body></html>
+
+        .form-item {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .submit-btn {
+            background-color: #2c7a53;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #236644;
+        }
+
+        /* 底部 */
+        footer {
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部 -->
+<header>
+    <h1>化英社 · 闲置物品交易平台</h1>
+    <p class="subtitle">物品交换 | 委托寄卖 | 社团专属</p>
+</header>
+
+<!-- 导航 -->
+<nav>
+    <a href="#sale">商品售卖</a>
+    <a href="#consign">委托寄卖</a>
+    <a href="#about">关于我们</a>
+</nav>
+
+<!-- 主体内容 -->
+<div class="container">
+    <!-- 商品售卖区 -->
+    <section id="sale">
+        <h2 class="section-title">📦 商品售卖区</h2>
+        <div class="goods-box">
+            <!-- 商品卡片1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/260x180/E8F5E8/333?text=书籍" alt="闲置物品">
+                <div class="card-info">
+                    <div class="card-name">老师小卡盲盒（5张）</div>
+                    <div class="card-price">¥5</div>
+
+                </div>
+            </div>
+
+            <!-- 商品卡片2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/260x180/E8F5E8/333?text=文具" alt="闲置物品">
+                <div class="card-info">
+                    <div class="card-name">全新笔记本套装</div>
+                    <div class="card-price">¥5</div>
+                    <div class="card-desc">未使用，适合学习使用</div>
+                    <small style="color:#999">状态：可交换 / 自提</small>
+                </div>
+            </div>
+
+            <!-- 商品卡片3 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/260x180/E8F5E8/333?text=词典" alt="闲置物品">
+                <div class="card-info">
+                    <div class="card-name">牛津英汉词典</div>
+                    <div class="card-price">¥15</div>
+                    <div class="card-desc">正版，封面轻微磨损</div>
+                    <small style="color:#999">状态：可交换 / 自提</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 委托寄卖区 -->
+    <section id="consign">
+        <h2 class="section-title">📝 委托寄卖申请</h2>
+        <div class="form-box">
+            <form id="consignForm">
+                <div class="form-item">
+                    <label>你的姓名</label>
+                    <input type="text" placeholder="请输入姓名" required>
+                </div>
+                <div class="form-item">
+                    <label>联系方式</label>
+                    <input type="text" placeholder="微信/手机号" required>
+                </div>
+                <div class="form-item">
+                    <label>物品名称</label>
+                    <input type="text" placeholder="如：英语书、文具等" required>
+                </div>
+                <div class="form-item">
+                    <label>期望价格</label>
+                    <input type="text" placeholder="仅填写数字，无需支付">
+                </div>
+                <div class="form-item">
+                    <label>物品描述</label>
+                    <textarea placeholder="成色、用途、备注等"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">提交寄卖申请</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<!-- 底部 -->
+<footer>
+    <p>© 2025 化英社 版权所有</p>
+    <p style="margin-top:5px">本平台仅展示信息，无线上收款功能</p>
+</footer>
+
+<script>
+    // 寄卖表单提交
+    const form = document.getElementById('consignForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('提交成功！化英社管理员将尽快与你联系～');
+        form.reset();
+    });
+</script>
+
+</body>
+</html>
