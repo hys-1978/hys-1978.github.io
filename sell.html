@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>委托寄卖 - 化学英才社</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>化学英才社 · 官方平台</h1>
+    <p style="margin-top:8px;font-size:16px">化学用品 · 社团周边 · 委托寄卖 · 绿色共享</p>
+</header>
+
+<div class="nav">
+    <a href="index.html">首页</a>
+    <a href="goods.html">商品信息</a>
+    <a href="sell.html">委托寄卖</a>
+    <a href="about.html">关于我们</a>
+    <a href="log.html">更新日志</a>
+    <a href="admin.html">后台管理</a>
+</div>
+
+<!-- 委托寄卖 -->
+<div id="sell" class="container">
+    <div class="title">📤 委托寄卖</div>
+    <div class="form">
+        <div class="form-item">
+            <label>寄卖人姓名</label>
+            <input type="text" id="sname" required>
+        </div>
+        <div class="form-item">
+            <label>班级</label>
+            <input type="text" id="sclass" required>
+        </div>
+        <div class="form-item">
+            <label>物品名称</label>
+            <input type="text" id="sgoods" required>
+        </div>
+        <div class="form-item">
+            <label>数量</label>
+            <input type="number" id="scount" min="1" required>
+        </div>
+        <div class="form-item">
+            <label>物品详情（成色/用途）</label>
+            <textarea id="sinfo"></textarea>
+        </div>
+        <div class="form-item">
+            <label>上传实物照片</label>
+            <input type="file" id="spic">
+        </div>
+        <button class="btn" onclick="submitSell()">提交寄卖申请</button>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2026 化学英才社 版权所有</p>
+    <p>本平台仅用于社团内部使用</p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
